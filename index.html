@@ -135,16 +135,48 @@
      END OF PRESERVED SEO
      ═══════════════════════════════════════════════════════════════ -->
 
-<!-- Fonts: Playfair Display (luxury display) + DM Sans (body) + DM Mono (labels) -->
+<!-- DNS prefetch & preconnect for all third-party origins -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<link rel="dns-prefetch" href="https://wa.me">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://www.googletagmanager.com">
 
-<!-- Font Awesome 6 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+<!-- Preload hero image — highest priority LCP asset -->
+<link rel="preload" as="image" href="me.jpg" fetchpriority="high">
+
+<!-- Preload critical font subsets — display text only (Playfair latin) -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@300;400&display=swap" onload="this.rel='stylesheet'" crossorigin>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@300;400&display=swap"></noscript>
+
+<!-- Font Awesome — async, non-render-blocking -->
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" onload="this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
 <style>
+/* ══════════════════════════════════════════════════
+   PAINT & RENDERING OPTIMISATIONS
+══════════════════════════════════════════════════ */
+/* Skip rendering work for off-screen sections until they're near viewport */
+#about,#services,#process,#portfolio,#why,#testimonials,#pricing,#faq,#contact{
+  content-visibility:auto;
+  contain-intrinsic-size:0 600px
+}
+/* Promote floating photo to its own compositor layer — avoids repaints */
+.hpc-frame{will-change:transform}
+/* Ensure images never cause horizontal overflow */
+img{max-width:100%;height:auto}
+
+/* ══════════════════════════════════════════════════
+   FONT DISPLAY — prevent invisible text during load
+══════════════════════════════════════════════════ */
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400;font-display:swap;src:local('Playfair Display Regular')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400;font-display:swap;src:local('DM Sans Regular')}
+@font-face{font-family:'DM Mono';font-style:normal;font-weight:400;font-display:swap;src:local('DM Mono Regular')}
+
 /* ══════════════════════════════════════════════════
    DESIGN TOKENS
 ══════════════════════════════════════════════════ */
@@ -1754,7 +1786,11 @@ html,body{overflow-x:hidden;max-width:100%}
 <!-- ════════════════════════════════════════════════
      JAVASCRIPT
 ════════════════════════════════════════════════ -->
-<script>
+<!-- Critical inline: lock scroll during loader (must run synchronously) -->
+<script>document.body.style.overflow='hidden';</script>
+
+<!-- All non-critical JS deferred — does not block rendering -->
+<script defer>
 function raf(fn){let t=false;return function(...a){if(!t){requestAnimationFrame(()=>{fn(...a);t=false});t=true}}}
 
 window.addEventListener('load',function(){
@@ -1762,9 +1798,8 @@ window.addEventListener('load',function(){
   setTimeout(function(){
     var l=document.getElementById('loader');
     if(l)l.classList.add('gone');
-  },2000);
+  },800);
 });
-document.body.style.overflow='hidden';
 
 (function(){
   var dot=document.getElementById('c-dot'),ring=document.getElementById('c-ring');
