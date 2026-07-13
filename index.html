@@ -656,19 +656,19 @@ body.ch #c-ring{width:54px;height:54px;border-color:var(--g3)}
 footer{background:var(--black);border-top:1px solid rgba(255,255,255,.04);padding-block:56px 28px}
 .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:clamp(28px,4vw,56px);margin-bottom:56px;padding-bottom:56px;border-bottom:1px solid rgba(255,255,255,.04)}
 .ft-logo{font-family:var(--ff-display);font-size:1.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;background:var(--gold-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:14px}
-.ft-brand p{font-size:.83rem;color:var(--t3);line-height:1.72;max-width:250px;margin-bottom:22px}
+.ft-brand p{font-size:.83rem;color:#7a7570;line-height:1.72;max-width:250px;margin-bottom:22px}
 .ft-social{display:flex;gap:10px}
 .ft-social a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;font-size:.82rem;color:var(--t3);transition:var(--tf)}
 .ft-social a:hover{background:rgba(212,175,55,.1);border-color:rgba(212,175,55,.28);color:var(--g3);transform:translateY(-2px)}
 .ft-col h4,.ft-col-hd{font-family:var(--ff-mono);font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:var(--t2);margin-bottom:18px;font-weight:400}
 .ft-links{display:flex;flex-direction:column;gap:9px}
-.ft-links a{font-size:.83rem;color:var(--t3);transition:color var(--tf);display:flex;align-items:center;gap:5px}
+.ft-links a{font-size:.83rem;color:#7a7570;transition:color var(--tf);display:flex;align-items:center;gap:5px}
 .ft-links a::before{content:'→';font-size:.65rem;color:var(--g3);opacity:0;transform:translateX(-6px);transition:var(--tf);display:inline-block}
 .ft-links a:hover{color:var(--t1)}
 .ft-links a:hover::before{opacity:1;transform:translateX(0)}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-.ft-copy{font-size:.78rem;color:var(--t3)}
-.ft-loc{font-size:.76rem;color:var(--t3);display:flex;align-items:center;gap:5px}
+.ft-copy{font-size:.78rem;color:#7a7570}
+.ft-loc{font-size:.76rem;color:#7a7570;display:flex;align-items:center;gap:5px}
 .ft-loc i{color:var(--g3);font-size:.68rem}
 
 /* ══════════════════════════════════════════════════
@@ -1205,7 +1205,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <p class="pc-desc" itemprop="description">Premium restaurant website with digital menu, WhatsApp ordering &amp; local SEO — driving 45% more bookings within 30 days of launch.</p>
           <div class="pc-link">
             <a href="https://the-daily-bites.vercel.app" target="_blank" rel="noopener noreferrer"
-               class="btn btn-gold btn-sm" itemprop="url">
+               class="btn btn-gold btn-sm" itemprop="url" aria-label="View Daily Bites website (opens in new tab)">
               Live Preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
           </div>
@@ -1226,7 +1226,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <p class="pc-desc" itemprop="description">Luxury salon website with WhatsApp booking and a premium brand identity that fills appointment slots.</p>
           <div class="pc-link">
             <a href="https://royaltouchsalon.vercel.app" target="_blank" rel="noopener noreferrer"
-               class="btn btn-gold btn-sm" itemprop="url">
+               class="btn btn-gold btn-sm" itemprop="url" aria-label="View Royal Touch Salon website (opens in new tab)">
               Live Preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
           </div>
@@ -1247,7 +1247,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <p class="pc-desc" itemprop="description">Elegant hotel website with room showcase, rich schema markup, and direct booking inquiry integration.</p>
           <div class="pc-link">
             <a href="https://hotelmadhuban.vercel.app" target="_blank" rel="noopener noreferrer"
-               class="btn btn-gold btn-sm" itemprop="url">
+               class="btn btn-gold btn-sm" itemprop="url" aria-label="View Hotel Madhuban website (opens in new tab)">
               Live Preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
           </div>
@@ -1268,7 +1268,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <p class="pc-desc" itemprop="description">Academic website with admission flow, course catalog, and a trust-building layout that increases enrolments.</p>
           <div class="pc-link">
             <a href="https://edu-elite-gamma.vercel.app" target="_blank" rel="noopener noreferrer"
-               class="btn btn-gold btn-sm" itemprop="url">
+               class="btn btn-gold btn-sm" itemprop="url" aria-label="View Edu Elite Academy website (opens in new tab)">
               Live Preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
           </div>
@@ -1289,7 +1289,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <p class="pc-desc" itemprop="description">High-energy gym website with membership plans, trainer profiles, and WhatsApp inquiry funnels that convert.</p>
           <div class="pc-link">
             <a href="https://powerfit-gym-eight.vercel.app" target="_blank" rel="noopener noreferrer"
-               class="btn btn-gold btn-sm" itemprop="url">
+               class="btn btn-gold btn-sm" itemprop="url" aria-label="View PowerFit Elite Gym website (opens in new tab)">
               Live Preview <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
             </a>
           </div>
@@ -1396,7 +1396,7 @@ html,body{overflow-x:hidden;max-width:100%}
 
       <div class="glass tc rv d1" itemscope itemtype="https://schema.org/Review">
         <div class="tc-qm" aria-hidden="true">"</div>
-        <div class="tc-stars" aria-label="5 out of 5 stars">
+        <div class="tc-stars" role="img" aria-label="5 out of 5 stars">
           <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
           <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
           <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -1413,7 +1413,7 @@ html,body{overflow-x:hidden;max-width:100%}
 
       <div class="glass tc rv d2" itemscope itemtype="https://schema.org/Review">
         <div class="tc-qm" aria-hidden="true">"</div>
-        <div class="tc-stars" aria-label="5 out of 5 stars">
+        <div class="tc-stars" role="img" aria-label="5 out of 5 stars">
           <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
           <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
           <i class="fa-solid fa-star" aria-hidden="true"></i>
@@ -1430,7 +1430,7 @@ html,body{overflow-x:hidden;max-width:100%}
 
       <div class="glass tc rv d3" itemscope itemtype="https://schema.org/Review">
         <div class="tc-qm" aria-hidden="true">"</div>
-        <div class="tc-stars" aria-label="5 out of 5 stars">
+        <div class="tc-stars" role="img" aria-label="5 out of 5 stars">
           <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
           <i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i>
           <i class="fa-solid fa-star" aria-hidden="true"></i>
