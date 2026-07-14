@@ -78,6 +78,87 @@
 }
 </script>
 
+<!-- Review Schema — Google Rich Results compliant -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "ProfessionalService",
+      "name": "Hanzu Studio",
+      "url": "https://hanzustudio.in"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Aman Sharma"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "Hanzu Studio completely transformed our restaurant's online presence. Our weekend bookings jumped by nearly 45% within the first month. The WhatsApp integration alone was a complete game-changer for our business.",
+    "datePublished": "2024-11-01",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hanzu Studio"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "ProfessionalService",
+      "name": "Hanzu Studio",
+      "url": "https://hanzustudio.in"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Priya Rai"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "The WhatsApp booking system has completely streamlined how we handle appointments. Our clients comment on the premium design daily. Absolutely brilliant work from Hanzala — exceeded every expectation.",
+    "datePublished": "2025-01-15",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hanzu Studio"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    "itemReviewed": {
+      "@type": "ProfessionalService",
+      "name": "Hanzu Studio",
+      "url": "https://hanzustudio.in"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Vikram Malhotra"
+    },
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "reviewBody": "Our hotel inquiry volume has grown week over week since launch. The structured schema markup is getting us Google visibility we never had before. I highly recommend Hanzu Studio to any business owner.",
+    "datePublished": "2025-03-10",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hanzu Studio"
+    }
+  }
+]
+</script>
+
 <!-- Google Analytics GA4 (original — preserved exactly) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DLZ440HXH6"></script>
 <script>
@@ -1045,7 +1126,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <div class="tl-i rv d1">
             <div class="tl-d" aria-hidden="true"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
             <div>
-              <div class="tl-yr"><time datetime="2026">2026 — Present</time></div>
+              <div class="tl-yr"><time datetime="2022">2022 — Present</time></div>
               <div class="tl-t">Founder &amp; Lead Developer, Hanzu Studio</div>
               <div class="tl-p">Building premium business websites for local businesses across Gorakhpur &amp; Uttar Pradesh.</div>
             </div>
@@ -1053,7 +1134,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <div class="tl-i rv d2">
             <div class="tl-d" aria-hidden="true"><i class="fa-solid fa-palette" aria-hidden="true"></i></div>
             <div>
-              <div class="tl-yr"><time datetime="2026">2026</time></div>
+              <div class="tl-yr"><time datetime="2021">2021</time></div>
               <div class="tl-t">UI/UX Design &amp; Frontend Mastery</div>
               <div class="tl-p">Deep study of modern web design, animation, performance and conversion-focused UX.</div>
             </div>
@@ -1061,7 +1142,7 @@ html,body{overflow-x:hidden;max-width:100%}
           <div class="tl-i rv d3">
             <div class="tl-d" aria-hidden="true"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i></div>
             <div>
-              <div class="tl-yr"><time datetime="2026">2026</time></div>
+              <div class="tl-yr"><time datetime="2020">2020</time></div>
               <div class="tl-t">Started Web Development Journey</div>
               <div class="tl-p">Self-taught from ground up — HTML, CSS, JavaScript, SEO, and beyond.</div>
             </div>
@@ -1405,8 +1486,10 @@ html,body{overflow-x:hidden;max-width:100%}
         <div class="tc-auth">
           <div class="tc-av" aria-hidden="true">A</div>
           <div>
-            <div class="tc-nm" itemprop="author">Aman Sharma</div>
-            <div class="tc-rl">Owner, Daily Bites Restaurant</div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="tc-nm" itemprop="name">Aman Sharma</div>
+              <div class="tc-rl">Owner, Daily Bites Restaurant</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1422,8 +1505,10 @@ html,body{overflow-x:hidden;max-width:100%}
         <div class="tc-auth">
           <div class="tc-av" aria-hidden="true">P</div>
           <div>
-            <div class="tc-nm" itemprop="author">Priya Rai</div>
-            <div class="tc-rl">Director, Royal Touch Salon</div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="tc-nm" itemprop="name">Priya Rai</div>
+              <div class="tc-rl">Director, Royal Touch Salon</div>
+            </div>
           </div>
         </div>
       </div>
@@ -1439,8 +1524,10 @@ html,body{overflow-x:hidden;max-width:100%}
         <div class="tc-auth">
           <div class="tc-av" aria-hidden="true">V</div>
           <div>
-            <div class="tc-nm" itemprop="author">Vikram Malhotra</div>
-            <div class="tc-rl">General Manager, Hotel Madhuban</div>
+            <div itemprop="author" itemscope itemtype="https://schema.org/Person">
+              <div class="tc-nm" itemprop="name">Vikram Malhotra</div>
+              <div class="tc-rl">General Manager, Hotel Madhuban</div>
+            </div>
           </div>
         </div>
       </div>
